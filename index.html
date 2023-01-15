@@ -1,0 +1,25 @@
+<html>
+ <head>
+ <title>Instagram Description Generator</title>
+ <link
+ rel="shortcut icon"
+ href="{{ url_for('scripts', filename='insta.png') }}"
+ />
+ <link rel="stylesheet" href="{{ url_for('scripts',
+filename='main.css') }}" />
+ </head>
+ <body>
+ <h1>Instagram Description Generator</h1>
+ <form method="post">
+ <label for="input_text">Input Text:</label><br>
+ <textarea id="input_text" name="input_text"></
+textarea><br>
+ <input type="submit" value="Generate
+Description">
+ </form>
+ {% if description %}
+ <h2>Generated Description:</h2>
+ <p>{{ description }}</p>
+ {% endif %}
+ </body>
+</html>
